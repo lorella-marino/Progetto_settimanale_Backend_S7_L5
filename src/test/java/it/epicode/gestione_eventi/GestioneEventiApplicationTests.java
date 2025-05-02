@@ -1,10 +1,10 @@
-package it.epicode.Progetto_settimanale_Backend_S7_L5;
+package it.epicode.gestione_eventi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ProgettoSettimanaleBackendS7L5ApplicationTests {
+class GestioneEventiApplicationTests {
 
 	@Test
 	void contextLoads() {
