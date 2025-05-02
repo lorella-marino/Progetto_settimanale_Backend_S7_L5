@@ -1,28 +1,21 @@
 package it.epicode.gestione_eventi.eventi;
 
-import it.epicode.gestione_eventi.utenti.Utente;
-import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
-
 @Data
-@Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "eventi")
-
-public class Evento {
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long id;
+public class EventoRequest {
     private Long idOrganizzatore;
+    @NotBlank (message = "Il titolo non può essere vuoto")
     private String titolo;
     private String descrizione;
     private String data;
     private String luogo;
+    @NotNull (message = "Il numero di posti disponibili non può essere vuoto")
     private int numeroPostiDisponibili;
-
 }

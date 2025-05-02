@@ -1,6 +1,7 @@
 package it.epicode.gestione_eventi.prenotazioni;
 
 import it.epicode.gestione_eventi.eventi.Evento;
+import it.epicode.gestione_eventi.utenti.Utente;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,6 +19,8 @@ public class Prenotazione {
     private Long id;
     @ManyToOne
     private Evento evento;
+    @ManyToOne
+    private Utente utente;
 
 
 }
